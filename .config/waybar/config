@@ -1,0 +1,49 @@
+{
+    // General Settings
+    "layer": "top",
+    "margin-top": 10,
+    "margin-bottom": 0,
+    "margin-left": 10,
+    "margin-right": 10,    
+    "spacing": 0,
+
+    // Load Modules
+    "include": [
+        "~/.config/waybar/quicklinks.json5",
+        "~/.config/waybar/modules.json5"
+    ],
+
+    // Modules Left
+    "modules-left": [
+        "custom/appmenu",
+        // "group/links",
+        // "group/bookmarks",
+        // "wlr/taskbar",
+        "group/quicklinks",
+        "hyprland/window",
+        "custom/empty"
+    ],
+
+    // Modules Center
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    // Modules Right    
+    "modules-right": [
+        "pulseaudio",
+        "backlight",
+        "bluetooth",
+        "battery", 
+        "network",
+        "group/hardware",
+        // "group/tools",
+        "tray",
+        // "custom/exit",
+        "clock",
+        "custom/wc",
+        "custom/notifpanel"
+    ]
+}
+
+

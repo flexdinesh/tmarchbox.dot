@@ -1,0 +1,73 @@
+[Desktop Entry]
+Name=Cursor (0.50.5)
+Comment=The AI Code Editor.
+GenericName=Text Editor
+Exec=/home/dpandiyan/Applications/Cursor-0.50.5-x86_64_aec262eb053320567576975b1462b365.AppImage --use-gl-desktop --ozone-platform-hint=wayland --enable-features=WaylandWindowDecorations %F
+# Icon=appimagekit_9974344b9fab6ccc7928d33c4a054fef_co.anysphere.cursor
+Icon=/home/dpandiyan/.local/share/icons/cursor/logo-light.png
+Type=Application
+StartupNotify=false
+StartupWMClass=Cursor
+Categories=TextEditor;Development;IDE;
+MimeType=application/x-cursor-workspace;
+Actions=Remove;Update;
+Keywords=cursor;
+
+X-AppImage-Version=0.50.5
+
+TryExec=/home/dpandiyan/Applications/Cursor-0.50.5-x86_64_aec262eb053320567576975b1462b365.AppImage
+X-AppImage-Old-Icon=co.anysphere.cursor
+X-AppImage-Old-Name=Cursor
+X-AppImage-Identifier=9974344b9fab6ccc7928d33c4a054fef
+X-AppImageLauncher-Version=2.2.0 (git commit 9ca001e), built on 2025-05-20 00:25:07 UTC
+[Desktop Action new-empty-window]
+Name=New Empty Window
+Name[de]=Neues leeres Fenster
+Name[es]=Nueva ventana vacía
+Name[fr]=Nouvelle fenêtre vide
+Name[it]=Nuova finestra vuota
+Name[ja]=新しい空のウィンドウ
+Name[ko]=새 빈 창
+Name[ru]=Новое пустое окно
+Name[zh_CN]=新建空窗口
+Name[zh_TW]=開新空視窗
+Exec=/home/dpandiyan/Applications/Cursor-0.50.5-x86_64_aec262eb053320567576975b1462b365.AppImage --new-window %F
+Icon=appimagekit_9974344b9fab6ccc7928d33c4a054fef_co.anysphere.cursor
+
+X-AppImage-Old-Icon=co.anysphere.cursor
+
+[Desktop Action Remove]
+Name=Remove AppImage from system
+Icon=AppImageLauncher
+Exec=/usr/lib/appimagelauncher/remove "/home/dpandiyan/Applications/Cursor-0.50.5-x86_64_aec262eb053320567576975b1462b365.AppImage"
+Name[ast]=Desaniciar AppImage del sistema
+Name[cs]=Odebrat AppImage ze systému
+Name[de]=AppImage vom System entfernen
+Name[en]=Remove AppImage from system
+Name[es]=Eliminar Appimage del Sistema
+Name[fr]=Supprimer l'AppImage du système
+Name[it]=Rimuovi AppImage dal sistema
+Name[nl]=AppImage deïnstalleren
+Name[pl]=Usuń AppImage z systemu
+Name[pt]=Remover AppImage do sistema
+Name[pt_PT]=Remover AppImage do sistema
+Name[ru]=Удалить AppImage из системы
+Name[zh_Hans]=从系统中移除 AppImage
+
+[Desktop Action Update]
+Name=Update AppImage
+Icon=AppImageLauncher
+Exec=/usr/lib/appimagelauncher/update "/home/dpandiyan/Applications/Cursor-0.50.5-x86_64_aec262eb053320567576975b1462b365.AppImage"
+Name[ast]=Anovar AppImage
+Name[cs]=Aktualizovat AppImage
+Name[de]=AppImage aktualisieren
+Name[en]=Update AppImage
+Name[es]=Actualizar Appimage
+Name[fr]=Mettre à jour l'AppImage
+Name[it]=Aggiorna AppImage
+Name[nl]=AppImage bijwerken
+Name[pl]=Uaktualnij AppImage
+Name[pt]=Actualizar AppImage
+Name[pt_PT]=Atualizar AppImage
+Name[ru]=Обновить AppImage
+Name[zh_Hans]=更新 AppImage

@@ -1,0 +1,33 @@
+# ignore all directories by default
+*
+!.gitignore
+
+# global git config
+!.gitconfig
+
+# zsh config
+!.zshrc
+
+# config files in ~/.config dir
+!/.config/
+!/.config/kitty/
+!/.config/kitty/**
+!/.config/nvim/
+!/.config/nvim/**
+!/.config/hypr/
+!/.config/hypr/**
+!/.config/waybar/
+!/.config/waybar/**
+!/.config/wofi/
+!/.config/wofi/**
+!/.config/fastfetch/
+!/.config/fastfetch/**
+!/.config/swaync/
+!/.config/swaync/**
+!.config/electron-flags.conf
+
+# config files in ~/.local dir
+!/.local/
+!/.local/share/
+!.local/share/applications
+!/.local/share/applications/*.desktop

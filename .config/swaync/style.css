@@ -1,0 +1,147 @@
+@import "./colors.css";
+
+* {
+  font-family: "NotoSans Nerd Font", "Font Awesome 6 Free", FontAwesome, Roboto,
+    Helvetica, Arial, sans-serif;
+  /* font-family: JetBrainsMono Nerd Font; */
+  font-size: 16px;
+  color: @text;
+  transition: 150ms;
+}
+
+/********************************
+********* NOTIFICATION **********
+*********************************/
+
+.notification {
+  border: none;
+  border-radius: 10px;
+}
+
+.summary {
+  font-size: 16px;
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+.notification-background {
+  background: transparent;
+}
+
+.notification-content {
+  background: transparent;
+  border-radius: 0px;
+  padding: 10px;
+}
+.image,
+.body-image {
+  /* .image is the icon */
+  margin: 0px 5px 0px 0px;
+}
+
+.notification-default-action {
+  background: @base;
+  /* border: 2px solid @yellow; */
+  border-radius: 10px;
+  transition: all 150ms ease-in-out;
+}
+
+.notification-default-action:not(:only-child) {
+  /* if other action options are also present */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.notification-default-action:hover {
+  /* border: 2px solid @mauve; */
+}
+
+.notification-action {
+  border: none;
+  border-radius: 5px;
+  background: @base;
+}
+
+.notification-action:hover {
+  background: @surface0;
+  /* border: 2px solid @surface1; */
+}
+
+.notification-action:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.notification-action:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.close-button {
+  padding: 0px;
+  margin: 5px;
+}
+
+.close-button:hover {
+  box-shadow: none;
+  background: @red;
+  transition: all 0.2s ease-in-out;
+}
+
+/********************************
+******** CONTROL CENTER *********
+********************************/
+
+.control-center {
+  background: @base;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 8px;
+}
+
+.notification-row {
+  background: transparent;
+  outline: none;
+}
+
+.time {
+  color: @green;
+  margin: 3px 37px 0px 0px;
+}
+
+.widget-buttons-grid {
+  margin-top: 15px;
+  background: @base;
+}
+
+.widget-volume {
+  background: @base;
+  color: @mauve;
+}
+
+.widget-dnd {
+  color: @mauve;
+  margin: 8px;
+  font-size: 1.1rem;
+}
+
+.widget-dnd > switch {
+  font-size: initial;
+  border-radius: 12px;
+  background: @base;
+  border: 2px solid @surface0;
+  box-shadow: none;
+}
+
+.widget-dnd > switch:checked {
+  background: @mauve;
+}
+
+.widget-dnd > switch slider {
+  background: @text;
+  border-radius: 15px;
+}
+
+.control-center-list {
+  background: transparent;
+}

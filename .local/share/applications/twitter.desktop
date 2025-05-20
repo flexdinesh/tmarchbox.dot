@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Twitter
+Comment="Open Twitter in browser"
+Exec=xdg-open https://x.com
+Icon=/home/dpandiyan/.local/share/icons/x/logo-white.png
+Terminal=false
+Type=Application

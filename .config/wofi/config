@@ -1,0 +1,12 @@
+show=drun
+prompt=
+layer=overlay
+always_parse_args=true
+allow_images=true
+image_size=24
+insensitive=true
+width=50%
+height=50%
+normal_window=true
+no_actions=true
+

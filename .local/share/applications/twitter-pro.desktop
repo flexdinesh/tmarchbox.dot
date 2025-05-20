@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Twitter Pro
+Comment="Open Twitter Pro in browser"
+Exec=xdg-open https://pro.x.com/
+Icon=/home/dpandiyan/.local/share/icons/x/logo-white.png
+Terminal=false
+Type=Application

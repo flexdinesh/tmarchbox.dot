@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Dinesh Pandiyan
+	github = flexdinesh
+[core]
+	editor = nvim
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[init]
+	defaultBranch = main
+[web]
+	browser = chromium

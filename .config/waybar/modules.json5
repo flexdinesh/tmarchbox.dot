@@ -1,0 +1,312 @@
+//  __  __           _       _
+// |  \/  | ___   __| |_   _| | ___  ___
+// | |\/| |/ _ \ / _` | | | | |/ _ \/ __|
+// | |  | | (_) | (_| | |_| | |  __/\__ \
+// |_|  |_|\___/ \__,_|\__,_|_|\___||___/
+//
+//
+{
+  // Workspaces
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace r-1",
+    "on-scroll-down": "hyprctl dispatch workspace r+1",
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
+    },
+    // "persistent-workspaces": {
+    //   "*": 5
+    // }
+  },
+  // Taskbar
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+      "Alacritty",
+      "kitty"
+    ],
+    // "app_ids-mapping": {
+    //   "firefoxdeveloperedition": "firefox-developer-edition"
+    // },
+    // "rewrite": {
+    //   "Firefox Web Browser": "Firefox",
+    //   "Foot Server": "Terminal"
+    // }
+  },
+  // Hyprland Window
+  "hyprland/window": {
+    // "rewrite": {
+    //   "(.*) — Mozilla Firefox": "$1",
+    //   "(.*) - Google Chrome": "$1",
+    //   "(.*) - Brave": "$1",
+    //   "(.*) - Chromium": "$1",
+    //   "(.*) - Brave Search": "$1",
+    //   "(.*) - Outlook": "$1",
+    //   "(.*) Microsoft Teams": "$1"
+    // },
+    "separate-outputs": true
+  },
+  // Empty
+  "custom/empty": {
+    "format": ""
+  },
+  // Tools
+  "custom/tools": {
+    "format": " ",
+    "tooltip-format": "Tools"
+  },
+  // Rofi Application Launcher
+  "custom/appmenu": {
+    "format": "",
+    "on-click": "sleep 0.2; pkill wofi || wofi --show drun",
+    "tooltip-format": "Open the application launcher"
+  },
+  // Power Menu
+  "custom/exit": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip-format": "Power Menu"
+  },
+    // World Clock
+  "custom/wc": {
+      "format": "󰥔",
+      "return-type": "json",
+      "interval": 60,
+      "exec": "$HOME/scripts/world-clock.sh"
+  },
+
+  // Hypridle inhibitor
+  "custom/hypridle": {
+    "format": "",
+    "return-type": "json",
+    "escape": true,
+    "exec-on-event": true,
+    "interval": 60,
+    "exec": "~/.config/waybar/scripts/hypridle.sh status",
+    "on-click": "hyprlock",
+    "on-click-right": "~/.config/waybar/scripts/hypridle.sh toggle"
+  },
+  // Bookmarks
+  "custom/bookmarks": {
+    "format": "",
+    "tooltip-format": "Bookmarks"
+  },
+  // Firefox shortcut
+  "custom/gmail": {
+    "format": "",
+    "on-click": "chromium --new-tab 'https://mail.google.com/mail/u/0/'",
+    "tooltip-format": "Gmail"
+  },
+  "custom/notifpanel": {
+    "format" : "",
+		"on-click": "swaync-client -t",
+    "tooltip-format": "Open notifications tray"
+  },
+  // Keyboard State
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+  // System tray
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+  // Clock
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:%a, %e %b %Y}",
+    "timezone": "",
+    "tooltip": true,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    // "tooltip-format": "{tz_list}",
+    // "timezones": [
+    //     "Europe/Warsaw",
+    //     "Asia/Kolkata",
+    //     "Australia/Sydney"
+    // ]
+  },
+  // System
+  "custom/system": {
+    "format": " ",
+    "tooltip": false
+  },
+  // CPU
+  "cpu": {
+    "format": " /  {usage}%"
+  },
+  // Memory
+  "memory": {
+    "format": " /  {}% "
+  },
+  // Harddisc space used
+  "disk": {
+    "interval": 30,
+    "format": " {percentage_used}%",
+    "path": "/"
+  },
+  "hyprland/language": {
+    "format": "/ K {short}"
+  },
+  // Group Hardware
+  "group/hardware": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/system",
+      "disk",
+      "cpu",
+      "memory"
+    ]
+  },
+  // Group Tools
+  "group/tools": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/tools",
+      "custom/hypridle"
+    ]
+  },
+  // Group Links
+  "group/links": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/empty"
+    ]
+  },
+  // Group Bookmarks
+  "group/bookmarks": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "custom/bookmarks",
+      "custom/gmail"
+    ]
+  },
+  // Network
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "  {ifname}",
+    "format-disconnected": "Disconnected",
+    "tooltip-format": "  {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-ethernet": "  {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+   // "on-click": "nmtui"
+  },
+  // Battery
+  "battery": {
+    "states": {
+      // "good": 90,
+      "warning": 30,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": "󰚥 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-alt": "{icon} {time}",
+    // "format-time": "{H}h{M}m",
+    // "interval": 30,
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
+  },
+  // Pulseaudio
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [
+        "",
+        " ",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  // Bluetooth
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "",
+    "format-off": "",
+    "interval": 30,
+    "on-click": "blueman-manager",
+    "format-no-controller": ""
+  },
+  // Other
+  "user": {
+    "format": "{user}",
+    "interval": 60,
+    "icon": false
+  },
+  // backlight:
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "scroll-step": 1
+  }
+}
+
