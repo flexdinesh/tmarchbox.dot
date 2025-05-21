@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Thinkmill Google Calendar
-Comment="Open Thinkmill calendar in browser"
-Exec=google-chrome-stable https://calendar.google.com/calendar/u/0/r
-Icon=/home/dpandiyan/.local/share/icons/google-calendar/logo.png
-Terminal=false
-Type=Application
-Categories=Utility;

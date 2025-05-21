@@ -133,12 +133,6 @@
     "timezone": "",
     "tooltip": true,
     "tooltip-format": "<tt><small>{calendar}</small></tt>"
-    // "tooltip-format": "{tz_list}",
-    // "timezones": [
-    //     "Europe/Warsaw",
-    //     "Asia/Kolkata",
-    //     "Australia/Sydney"
-    // ]
   },
   // System
   "custom/system": {
